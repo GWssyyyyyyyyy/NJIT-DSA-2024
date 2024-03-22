@@ -87,8 +87,7 @@ public class StackImplementation<E> implements StackInterface<E> {
    @Override
    public int size() {
       // TODO: Implement this
-      int i = new Integer(currentIndex + 1);
-      return i;
+      return (int) (currentIndex + 1);
    }
 
    @Override
