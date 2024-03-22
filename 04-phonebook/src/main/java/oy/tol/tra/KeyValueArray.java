@@ -85,14 +85,14 @@ public class KeyValueArray<K extends Comparable<K>, V> implements Dictionary<K,V
             sorted[newIndex++] = new Pair<>(pairs[index].getKey(), pairs[index].getValue());
          }
       }
-      Algorithms.fastSort(sorted);
+      algorithm.fastSort(sorted);
       return sorted;
    }
 
    @Override
    public void compress() throws OutOfMemoryError {
       // First partition the null's to the end of the array.
-      int indexOfFirstNull = Algorithms.partitionByRule(pairs, count, element -> element == null);
+      int indexOfFirstNull = algorithm.partitionByRule(pairs, count, element -> element == null);
       // Then reallocate using the index from partitioning, pointing the first null in the array.
       reallocate(indexOfFirstNull);
    }

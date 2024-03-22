@@ -105,7 +105,7 @@ public class KeyValueHashTable<K extends Comparable<K>, V> implements Dictionary
               sorted[newIndex++] = new Pair<>(values[index].getKey(), values[index].getValue());
            }
         }
-        Algorithms.fastSort(sorted);
+        algorithm.fastSort(sorted);
         return sorted;
       }
 
