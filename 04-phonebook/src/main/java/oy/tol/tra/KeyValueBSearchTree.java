@@ -8,6 +8,7 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
     private TreeNode<K, V> root;
     private int count = 0;
     private int maxTreeDepth = 0;
+    private algorithm Algorithms;
 
 
     @Override
@@ -95,7 +96,7 @@ public class KeyValueBSearchTree<K extends Comparable<K>, V> implements Dictiona
         TreeToArrayVisitor<K, V> visitor = new TreeToArrayVisitor<>(count);
         root.accept(visitor);
         Pair<K, V>[] sorted = visitor.getArray();
-        algorithm.fastSort(sorted);
+        Algorithms.fastSort(sorted);
         return sorted;
     }
 
