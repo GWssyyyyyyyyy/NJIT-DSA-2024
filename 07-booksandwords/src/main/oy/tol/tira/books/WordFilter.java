@@ -26,7 +26,7 @@ class WordFilter {
             if (ignoreWordCount + items.length > wordsToFilter.length) {
                 reallocateArray();
             }
-            for (int count = 0; count < items.length; count++) {                
+            for (int count = 0; count < items.length; count++) {
                 wordsToFilter[ignoreWordCount++] = items[count];
             }
         }
@@ -36,7 +36,7 @@ class WordFilter {
     int ignoreWordCount() {
         return ignoreWordCount;
     }
-    
+
     boolean shouldFilter(String word) {
         for (int count = 0; count < wordsToFilter.length; count++) {
             if (wordsToFilter[count] == null) {
