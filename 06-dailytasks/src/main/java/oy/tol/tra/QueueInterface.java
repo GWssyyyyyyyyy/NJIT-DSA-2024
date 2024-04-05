@@ -1,7 +1,7 @@
 package oy.tol.tra;
 
 /**
- * A generic interface to queue class. Queues work following 
+ * A generic interface to queue class. Queues work following
  * the first-in-first-out principle.
  * Students: Implement this interface in a separate <code>QueueImplementation.java</code> file.
  *           No implementation in this file!!
@@ -13,14 +13,14 @@ public interface QueueInterface<E> {
     @return The number of elements the queue can currently hold.
     */
    public int capacity();
-   
+
    /**
     * Add an element to the queue.
     * @param element The element to add, must not be null.
-    * @throws QueueAllocationException If the reallocation for the queue failed in case queue needs reallocation.
+    * @throws DailyTasks If the reallocation for the queue failed in case queue needs reallocation.
     * @throws NullPointerException If the element is null.
     */
-   public void enqueue(E element) throws QueueAllocationException, NullPointerException;
+   public void enqueue(E element) throws DailyTasks, NullPointerException;
 
    /**
     * Removes an element from the queue.
