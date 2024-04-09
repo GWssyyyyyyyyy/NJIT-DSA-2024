@@ -25,16 +25,16 @@ public interface QueueInterface<E> {
    /**
     * Removes an element from the queue.
     * @return The element from the head of the queue.
-    * @throws QueueIsEmptyException If the queue is empty.
+    * @throws QueuelsEmptyException If the queue is empty.
     */
-   public E dequeue() throws QueueIsEmptyException;
+   public E dequeue() throws QueuelsEmptyException;
 
    /**
     * Returns the element at the head of the queue, not removing it from the queue.
     * @return The element in the head of the queue.
-    * @throws QueueIsEmptyException If the queue is empty.
+    * @throws QueuelsEmptyException If the queue is empty.
     */
-   public E element() throws QueueIsEmptyException;
+   public E element() throws QueuelsEmptyException;
 
    /**
     * Returns the count of elements currently in the queue.
