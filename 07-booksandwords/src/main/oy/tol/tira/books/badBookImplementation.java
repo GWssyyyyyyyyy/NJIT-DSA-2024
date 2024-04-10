@@ -11,7 +11,7 @@ import java.util.Locale;
  * Really bad book. Uses linear arrays with O(n^2) loops within loops,
  * bubble sort etc.
  */
-class BadBookImplementation implements Book {
+class badBookImplementation implements Book {
 
     private class WordCount {
         WordCount() {
